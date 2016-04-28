@@ -7,14 +7,68 @@
 
   <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
 
-  <link rel="stylesheet" href="css/uikit.min.css" />
+  <link rel="stylesheet" href="css/uikit.almost-flat.min.css" />
+  <link rel="stylesheet" href="css/components/sticky.css" />
+
   <script src="js/uikit.min.js"></script>
+  <script src="js/components/sticky.js"></script>
+
+  <!-- This following line is optional. Only necessary if you use the option css3:false and you want to use other easing effects rather than "linear", "swing" or "easeInOutCubic". -->
+  <script src="js/fullpage/vendors/jquery.easings.min.js"></script>
+
+
+  <!-- This following line is only necessary in the case of using the plugin option `scrollOverflow:true` -->
+  <script type="text/javascript" src="js/fullpage/vendors/jquery.slimscroll.min.js"></script>
+
+  <script type="text/javascript" src="js/fullpage/jquery.fullPage.js"></script>
+
+
+  <!-- Vegas BG SLideshow -->
+
+  <link rel="stylesheet" href="js/vegas/vegas.min.css">
+  <script src="js/vegas/vegas.min.js"></script>
+
+  <link rel="stylesheet" type="text/css" href="style/style.css" />
 
 </head>
 
 <body>
+  <nav class="uk-navbar data-uk-sticky">
+      <div class="uk-navbar-flip">
+          <ul class="uk-navbar-nav">
+              <li><a href="">Section one</a></li>
+              <li><a href="">Section one</a></li>
+              <li><a href="">Section one</a></li>
+              <li><a href="">Section one</a></li>
+          </ul>
+      </div>
+  </nav>
+
+
+  <div id="fullpage">
+
+
+
+
+
+      <div class="section eins">
+              <!--  LOGO -->
+              <div class="row">
+                  <div class="col-lg-12 col-xs-12 header"><div class="logo"><img src="http://akaipro.de/sites/default/files/akai_logo_0.png"></div></div>
+              </div>
+
+              <div class="row">
+                  <div class="col-lg-12 bighead">Discover <strong>Touch</strong></div>
+              </div>
+
+        <div class="row">
+          <div class="col-lg-12 textbox">MUSIC PRODUCTION CONTROLLER MIT 7“ MULTI-TOUCHSCREEN</div>
+        </div>
+        </div>
 
   <div class="uk-container uk-container-center uk-margin-top">
+
+
 
     <div class="uk-panel uk-panel-box uk-text-center">
 
@@ -40,5 +94,33 @@
 
 
 </body>
+
+<script type="text/javascript">
+
+$(".eins, .seven").vegas({
+    slides: [
+        { src: "http://maschinemasters.com/wp-content/uploads/2015/10/new-akai-mpc-touch.jpg" },
+        { src: "https://i.ytimg.com/vi/_3UfVaeU44g/maxresdefault.jpg" },
+        { src: "https://www.amazona.de/wp-content/uploads/2015/12/MPC-Touch-4.jpg" },
+        { src: "https://i.ytimg.com/vi/aWY68N82Epg/maxresdefault.jpg" }
+    ]
+});
+
+
+
+
+</script>
+
+<script type="text/javascript">
+
+$(document).ready(function() {
+    $('#fullpage').fullpage({
+        autoScrolling: false,
+        fitToSection: false
+    });
+});
+
+
+</script>
 
 </html>
